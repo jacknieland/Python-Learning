@@ -1,6 +1,11 @@
 import random
 def compare():
-	a1 = int(raw_input("Please enter 1 for rock, 2 for paper, or 3 for scissors. "))
+	
+	while True:
+		a1 = int(raw_input("Please enter 1 for rock, 2 for paper, or 3 for scissors. "))
+		if a1 in (1,2,3):
+			break
+		print("Please enter only 1, 2, or 3")
 	a2 = random.randint(1,3)
 	names = ["Blank", "rock", "paper", "scissors"]
 	win = ("Congratulations, you won!")
@@ -42,3 +47,4 @@ while True:
 	else:
 		print("Thanks for playing")
 		break
+
